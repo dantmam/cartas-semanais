@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+body {
+    background-color: #000;
+    color: #fff;
+}
+h1, h2 {
+    text-align: center;
+    font-family: "Special Elite", system-ui;
+    margin-bottom: 2rem;
+}
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+.secao-de-entrada {
+    padding: 3rem 0 1rem 0;
+    width: 50%;
+    margin: 0 auto;
+}
+form {
+    text-align: center;
+}
+label {
+    display: block;
+    margin-bottom: 1rem;
+}
+input {
+    border-radius: 900px;
+    padding: .5rem 1rem;
+}
+.fotos {
+    width: 220px;
+    background-color: #fff;
+    position: relative;
+    padding: 1rem 1rem 3rem 1rem;
+    & img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+    }
+    &:nth-child(1) {
+        position: absolute;
+        left: 3rem;
+        transform: rotate(-20deg);
+    }
+    &:nth-child(2) {
+        position: absolute;
+        right: 3rem;
+        transform: rotate(-20deg);
+    }
+    &:nth-child(3) {
+        position: absolute;
+        left: 3rem;
+        bottom: 1rem;
+        transform: rotate(-20deg);
+    }
+    &:nth-child(4) {
+        position: absolute;
+        right: 3rem;
+        bottom: 1rem;
+        transform: rotate(-20deg);
+
+    }
+}
+.pin {
+    position: absolute;
+    top: -1rem;
+    left: 0;
+    right: 0;
+    width: 50px !important;
+    height: auto !important;
+    object-fit: contain !important;
+    margin: 0 auto;
+}
+#loading {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 18px;
+}
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top: 4px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+    margin-bottom: 10px;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+#mensagem {
+    font-weight: bold;
+    margin-top: 15px;
+    font-size: 18px;
+    text-align: center;
+}
+#mensagem.vermelho {
+    color: red;
+}
+#mensagem.verde {
+    color: green;
+}
+.check {
+    font-size: 30px;
+    color: green;
+    margin-top: 10px;
+}
+.countdown-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.countdown-box {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px;
+}
+
+.countdown-number {
+    font-size: 32px;
+    font-weight: bold;
+    color: #333;
+}
+
+.countdown-label {
+    font-size: 14px;
+    color: #666;
+    text-transform: uppercase;
+    text-align: center;
+}
