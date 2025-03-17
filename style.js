@@ -5,7 +5,7 @@ if (form) {
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Evita o envio normal do formulário
 
-        let dataCorreta = "2024-02-14"; // Substitua pela data correta (formato YYYY-MM-DD)
+        let dataCorreta = "2020-08-08"; // Substitua pela data correta (formato YYYY-MM-DD)
         let dataDigitada = document.getElementById("data").value;
         let loading = document.getElementById("loading");
         let mensagem = document.getElementById("mensagem");
