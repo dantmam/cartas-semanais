@@ -24,13 +24,29 @@ h1, h2 {
 form {
     text-align: center;
 }
+.form-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 label {
     display: block;
     margin-bottom: 1rem;
 }
 input {
     border-radius: 900px;
-    padding: .5rem 1rem;
+    padding: .5rem 1rem !important;
+    &[type='submit'] {
+      background-color: #fff;
+      color: #000;
+      border: 1px solid #fff;
+      transition: all 500ms;
+        &[type='submit']:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    }
 }
 .fotos {
     width: 220px;
@@ -113,7 +129,7 @@ input {
     color: red;
 }
 #mensagem.verde {
-    color: green;
+    color: rgb(2, 207, 2);
 }
 .check {
     font-size: 30px;
@@ -170,6 +186,8 @@ input {
     }
     .secao-de-entrada {
         width: 100%;
+        padding-bottom: 12rem;
+        position: relative;
     }
     #loading {
         padding: 0 1rem;
@@ -185,5 +203,8 @@ input {
     }
     .carta {
         margin-bottom: 2rem;
+    }
+    #mensagem {
+        backdrop-filter: blur(20.119815826416016px);
     }
 }
