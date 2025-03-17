@@ -63,7 +63,6 @@ input {
         right: 3rem;
         bottom: 1rem;
         transform: rotate(-20deg);
-
     }
 }
 .pin {
@@ -75,6 +74,7 @@ input {
     height: auto !important;
     object-fit: contain !important;
     margin: 0 auto;
+    z-index: 1;
 }
 #loading {
     display: none;
@@ -146,4 +146,44 @@ input {
     color: #666;
     text-transform: uppercase;
     text-align: center;
+}
+
+@media (max-width: 768px) {
+    .fotos {
+        width: 100px;
+        padding: .5rem .5rem 1rem .5rem;
+        & img {
+            height: 100px;
+        }
+        &:nth-child(2), &:nth-child(4) {
+            right: 2rem;
+        }
+        &:nth-child(1), &:nth-child(3) {
+            left: 2rem;
+        }
+        &:nth-child(3), &:nth-child(4) {
+            bottom: 2rem;
+        }
+    }
+    .container {
+        margin-top: 10rem;
+    }
+    .secao-de-entrada {
+        width: 100%;
+    }
+    #loading {
+        padding: 0 1rem;
+        text-align: center;
+    }
+    .countdown-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .pin {
+        width: 30px !important;
+        top: -.5rem;
+    }
+    .carta {
+        margin-bottom: 2rem;
+    }
 }

@@ -19,7 +19,7 @@
       <div class="fotos">
         <img class="pin" src="img/pin.webp" alt="" />
         <div class="carousel-fotos">
-          <img src="img/foto-1.jpg" alt="" />
+          <img src="img/foto1.jpg" alt="" />
           <img src="img/foto2.jpg" alt="" />
           <img src="img/foto3.jpg" alt="" />
           <img src="img/foto4.jpg" alt="" />
@@ -57,7 +57,7 @@
       </div>
 
       <div class="container" data-aos="fade-down" data-aos-duration="3000">
-        <p>
+        <p class="carta">
             Não sei quando vc vai ler isso, vc aparentemente não gosta muito de
             mim quando estou longe. Blz, os homens dos livros que vc lê nunca
             iriam deixar a mocinha gostosona. Eu tbm não queria deixar minha
@@ -112,6 +112,15 @@
         <h2 class="mt-5">para ver o Gô</h2>
     </div>
     </div>
+    <style>
+        @media (max-width: 768px) {
+    .fotos {
+        &:nth-child(3), &:nth-child(4) {
+            display: none;
+        }
+    }
+}
+    </style>
   </body>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
   <script
