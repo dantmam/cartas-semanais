@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cartas semanais</title>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="slick/slick/slick.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="secao-de-entrada">
+        <div class="fotos">
+            <img class="pin" src="img/pin.webp" alt="" />
+            <div class="carousel-fotos">
+                <img src="img/foto1.jpg" alt="" />
+                <img src="img/foto2.jpg" alt="" />
+                <img src="img/foto3.jpg" alt="" />
+                <img src="img/foto4.jpg" alt="" />
+            </div>
+        </div>
+        <div class="fotos">
+            <img class="pin" src="img/pin.webp" alt="" />
+
+            <div class="carousel-fotos">
+                <img src="img/foto5.webp" alt="" />
+                <img src="img/foto6.jpg" alt="" />
+                <img src="img/foto7.webp" alt="" />
+                <img src="img/foto8.jpg" alt="" />
+            </div>
+        </div>
+        <div class="fotos">
+            <img class="pin" src="img/pin.webp" alt="" />
+
+            <div class="carousel-fotos">
+                <img src="img/foto9.jpg" alt="" />
+                <img src="img/foto10.jpg" alt="" />
+                <img src="img/foto11.webp" alt="" />
+                <img src="img/foto12.jpg" alt="" />
+            </div>
+        </div>
+        <div class="fotos">
+            <img class="pin" src="img/pin.webp" alt="" />
+
+            <div class="carousel-fotos">
+                <img src="img/foto13.jpg" alt="" />
+                <img src="img/foto14.jpg" alt="" />
+                <img src="img/foto15.jpg" alt="" />
+                <img src="img/foto16.jpg" alt="" />
+            </div>
+        </div>
+
+        <div class="container" data-aos="fade-down" data-aos-duration="3000">
+            <p class="carta">
+                Oi moxii, essa é a segunda carta de 6 que virão, então vc pode contar o tempo que falta pra me ver dessa
+                forma, é mais divertido. Acredita que não tem nem duas semanas que nos vimos?! Pois é, parece que tem
+                anos que não vejo minha Vi.
+                <br> <br>
+                Serão as 7 semanas mais demoradas das nossas vidas, mas quando esse contador chegar a 0 vai ser o
+                momento em que eu estarei completo novamente. Vamos ficar juntos por muuuitos meses, vamos viajar,
+                conhecer lugares, mudar o status do relacionamento hehehe.
+                <br>
+                <br>
+                Não vou mentir que to muito ansioso pra julho, sinto muita falta de vc aqui, quero ir à praia com vc,
+                caminhar na areia, fazer cada loucura com vc e mal posso esperar por isso. Por hj é só vivis, me divirto
+                muito fazendo essas cartas e a dessa semana é sobre minha saudade por vc. Leia a carta antes de bagaçar
+                o lanche da hemo, eu te amo vivizinha!!
+            </p>
+
+            <h1>Faltam <span id="countdown"></span></h1>
+
+            <div class="countdown-container">
+                <div class="countdown-box">
+                    <div class="countdown-number" id="months">0</div>
+                    <div class="countdown-label">Meses</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="weeks">0</div>
+                    <div class="countdown-label">Semanas</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="days">0</div>
+                    <div class="countdown-label">Dias</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="hours">0</div>
+                    <div class="countdown-label">Horas</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="minutes">0</div>
+                    <div class="countdown-label">Minutos</div>
+                </div>
+                <div class="countdown-box">
+                    <div class="countdown-number" id="seconds">0</div>
+                    <div class="countdown-label">Segundos</div>
+                </div>
+            </div>
+            <h2 class="mt-5">para ver o Gô</h2>
+        </div>
+    </div>
+    <style>
+    @media (max-width: 768px) {
+        .fotos {
+
+            &:nth-child(3),
+            &:nth-child(4) {
+                display: none;
+            }
+        }
+    }
+    </style>
+</body>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous">
+</script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script type="text/javascript" src="slick/slick/slick.js"></script>
+<script src="style.js"></script>
+<script>
+AOS.init();
+</script>
+
+</html>

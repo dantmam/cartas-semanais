@@ -37,6 +37,7 @@ label {
 input {
     border-radius: 900px;
     padding: .5rem 1rem !important;
+    border: none;
     &[type='submit'] {
       background-color: #fff;
       color: #000;
@@ -46,6 +47,9 @@ input {
             background-color: #000;
             color: #fff;
         }
+    }
+    &:focus-visible {
+        outline: unset;
     }
 }
 .fotos {

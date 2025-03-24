@@ -5,8 +5,8 @@ if (form) {
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Evita o envio normal do formulário
 
-        let dataCorreta = "2020-08-08"; // Substitua pela data correta (formato YYYY-MM-DD)
-        let dataDigitada = document.getElementById("data").value;
+        let respostaCorreta = "Dark"; // Substitua pela data correta (formato YYYY-MM-DD)
+        let respostaDigitada = document.getElementById("resposta").value;
         let loading = document.getElementById("loading");
         let mensagem = document.getElementById("mensagem");
         let fraseExtra = document.getElementById("fraseExtra");
@@ -19,12 +19,12 @@ if (form) {
         setTimeout(() => {
             loading.style.display = "none"; // Esconde o loading após 2 segundos
             
-            if (dataDigitada === dataCorreta) {
+            if (respostaDigitada.toLowerCase() === respostaCorreta.toLowerCase()) {
                 mensagem.innerHTML = "<span class='check'>✔</span> E não é que gosta de mim mesmo";
                 mensagem.classList.add("verde");
 
                 setTimeout(() => {
-                    window.location.href = "carta-semanal.html"; // Redireciona após 2 segundos
+                    window.location.href = "carta-semanal-2.html"; // Redireciona após 2 segundos
                 }, 2000);
             } else {
                 mensagem.textContent = "Acho que você não gosta de mim, tente novamente.";
