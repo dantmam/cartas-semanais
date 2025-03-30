@@ -5,7 +5,7 @@ if (form) {
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Evita o envio normal do formulário
 
-        let respostaCorreta = "Dark"; // Substitua pela data correta (formato YYYY-MM-DD)
+        let respostaCorreta = "pousando no amor"; // Substitua pela data correta (formato YYYY-MM-DD)
         let respostaDigitada = document.getElementById("resposta").value;
         let loading = document.getElementById("loading");
         let mensagem = document.getElementById("mensagem");
@@ -24,7 +24,7 @@ if (form) {
                 mensagem.classList.add("verde");
 
                 setTimeout(() => {
-                    window.location.href = "carta-semanal-2.html"; // Redireciona após 2 segundos
+                    window.location.href = "carta-semanal-3.html"; // Redireciona após 2 segundos
                 }, 2000);
             } else {
                 mensagem.textContent = "Acho que você não gosta de mim, tente novamente.";
