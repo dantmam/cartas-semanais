@@ -1,47 +1,38 @@
+// Verifica se o formulário existe antes de adicionar o event listener
 let form = document.getElementById("formulario");
 
 if (form) {
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Evita o envio normal do formulário
 
-        let respostaCorreta = "Vestido xadrez";
-        let radios = document.getElementsByName("alternativa");
-        let respostaSelecionada = "";
+        let dataCorreta = "2021-10-31"; // Substitua pela data correta (formato YYYY-MM-DD)
+        let dataDigitada = document.getElementById("data").value;
         let loading = document.getElementById("loading");
         let mensagem = document.getElementById("mensagem");
         let fraseExtra = document.getElementById("fraseExtra");
 
-        // Verifica qual radio foi marcado
-        for (let i = 0; i < radios.length; i++) {
-            if (radios[i].checked) {
-                respostaSelecionada = radios[i].value;
-                break;
-            }
-        }
-
-        mensagem.textContent = "";
+        mensagem.textContent = ""; // Limpa a mensagem anterior
         mensagem.className = "";
-        fraseExtra.textContent = "";
-        loading.style.display = "flex";
+        fraseExtra.textContent = ""; // Limpa a frase extra
+        loading.style.display = "flex"; // Exibe o loading
 
         setTimeout(() => {
-            loading.style.display = "none";
-
-            if (respostaSelecionada.toLowerCase() === respostaCorreta.toLowerCase()) {
+            loading.style.display = "none"; // Esconde o loading após 2 segundos
+            
+            if (dataDigitada === dataCorreta) {
                 mensagem.innerHTML = "<span class='check'>✔</span> E não é que gosta de mim mesmo";
                 mensagem.classList.add("verde");
 
                 setTimeout(() => {
-                    window.location.href = "carta-semanal-4.html";
+                    window.location.href = "carta-semanal-5.html"; // Redireciona após 2 segundos
                 }, 2000);
             } else {
                 mensagem.textContent = "Acho que você não gosta de mim, tente novamente.";
                 mensagem.classList.add("vermelho");
             }
-        }, 2000);
+        }, 2000); // Tempo de espera para simular o loading
     });
 }
-
 
 // Inicializa o Slick apenas se o elemento existe
 jQuery(document).ready(function ($) {

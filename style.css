@@ -60,6 +60,10 @@ input {
     &:focus-visible {
         outline: unset;
     }
+    &[type='date'] {
+        width: max-content;
+        margin: 0 auto;
+    }
 }
 .fotos {
     width: 220px;
