@@ -1,36 +1,44 @@
-// Verifica se o formulário existe antes de adicionar o event listener
 let form = document.getElementById("formulario");
 
 if (form) {
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Evita o envio normal do formulário
 
-        let dataCorreta = "2021-10-31"; // Substitua pela data correta (formato YYYY-MM-DD)
-        let dataDigitada = document.getElementById("data").value;
+        let respostaCorreta = "Quadro do naruto";
+        let radios = document.getElementsByName("alternativa");
+        let respostaSelecionada = "";
         let loading = document.getElementById("loading");
         let mensagem = document.getElementById("mensagem");
         let fraseExtra = document.getElementById("fraseExtra");
 
-        mensagem.textContent = ""; // Limpa a mensagem anterior
+        // Verifica qual radio foi marcado
+        for (let i = 0; i < radios.length; i++) {
+            if (radios[i].checked) {
+                respostaSelecionada = radios[i].value;
+                break;
+            }
+        }
+
+        mensagem.textContent = "";
         mensagem.className = "";
-        fraseExtra.textContent = ""; // Limpa a frase extra
-        loading.style.display = "flex"; // Exibe o loading
+        fraseExtra.textContent = "";
+        loading.style.display = "flex";
 
         setTimeout(() => {
-            loading.style.display = "none"; // Esconde o loading após 2 segundos
-            
-            if (dataDigitada === dataCorreta) {
+            loading.style.display = "none";
+
+            if (respostaSelecionada.toLowerCase() === respostaCorreta.toLowerCase()) {
                 mensagem.innerHTML = "<span class='check'>✔</span> E não é que gosta de mim mesmo";
                 mensagem.classList.add("verde");
 
                 setTimeout(() => {
-                    window.location.href = "carta-semanal-5.html"; // Redireciona após 2 segundos
+                    window.location.href = "carta-semanal-6.html";
                 }, 2000);
             } else {
                 mensagem.textContent = "Acho que você não gosta de mim, tente novamente.";
                 mensagem.classList.add("vermelho");
             }
-        }, 2000); // Tempo de espera para simular o loading
+        }, 2000);
     });
 }
 
