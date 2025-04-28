@@ -1,29 +1,47 @@
 @import url('https://fonts.googleapis.com/css2?family=Special+Elite&display=swap');
+
 body {
     background-color: #000;
     color: #fff;
 }
+
 h1, h2 {
     text-align: center;
     font-family: "Special Elite", system-ui;
     margin-bottom: 2rem;
 }
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
 @keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes blink {
-    50% { border-color: transparent; }
+    50% {
+        border-color: transparent;
+    }
 }
+
 .secao-de-entrada {
     padding: 3rem 0 1rem 0;
     width: 50%;
     margin: 0 auto;
 }
+
 form {
     text-align: center;
 }
+
 .form-group {
     width: max-content;
     margin: 0 auto;
@@ -31,68 +49,82 @@ form {
     flex-direction: column;
     align-items: start;
     gap: 1rem;
+
     & div {
         display: flex;
         justify-content: center;
         gap: 10px;
+
         & label {
             margin-bottom: 0;
         }
     }
 }
+
 label {
     display: block;
     margin-bottom: 1rem;
 }
+
 input {
     border-radius: 900px;
     padding: .5rem 1rem !important;
     border: none;
+
     &[type='submit'] {
-      background-color: #fff;
-      color: #000;
-      border: 1px solid #fff;
-      transition: all 500ms;
-      width: 100%;
+        background-color: #fff;
+        color: #000;
+        border: 1px solid #fff;
+        transition: all 500ms;
+        width: 100%;
+
         &[type='submit']:hover {
             background-color: #000;
             color: #fff;
         }
     }
+
     &:focus-visible {
         outline: unset;
     }
+
     &[type='date'] {
         width: max-content;
         margin: 0 auto;
     }
 }
+
 .fotos {
     width: 220px;
     background-color: #fff;
     position: relative;
     padding: 1rem 1rem 2rem 1rem;
+
     & img {
         width: 100%;
         height: 200px;
         object-fit: cover;
     }
+
     &:nth-child(1) {
         position: absolute;
         left: 3rem;
         transform: rotate(-20deg);
     }
+
     &:nth-child(2) {
         position: absolute;
         right: 3rem;
         transform: rotate(-20deg);
     }
+
     &:nth-child(3) {
         position: absolute;
         left: 3rem;
         bottom: 1rem;
         transform: rotate(-20deg);
     }
+
     &:nth-child(4) {
         position: absolute;
         right: 3rem;
@@ -100,6 +132,7 @@ input {
         transform: rotate(-20deg);
     }
 }
+
 .pin {
     position: absolute;
     top: -1rem;
@@ -111,6 +144,7 @@ input {
     margin: 0 auto;
     z-index: 1;
 }
+
 #loading {
     display: none;
     flex-direction: column;
@@ -125,6 +159,7 @@ input {
     color: white;
     font-size: 18px;
 }
+
 .spinner {
     border: 4px solid rgba(255, 255, 255, 0.3);
     border-top: 4px solid white;
@@ -134,27 +169,38 @@ input {
     animation: spin 1s linear infinite;
     margin-bottom: 10px;
 }
+
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
+
 #mensagem {
     font-weight: bold;
     margin-top: 15px;
     font-size: 18px;
     text-align: center;
 }
+
 #mensagem.vermelho {
     color: red;
 }
+
 #mensagem.verde {
     color: rgb(2, 207, 2);
 }
+
 .check {
     font-size: 30px;
     color: green;
     margin-top: 10px;
 }
+
 .countdown-container {
     display: flex;
     justify-content: center;
@@ -183,46 +229,70 @@ input {
     text-align: center;
 }
 
+.cartas-passadas {
+    & ul {
+        padding-left: 0;
+    }
+
+    & li {
+        list-style: none;
+        font-family: "Special Elite", system-ui;
+        color: #fff;
+        text-align: center;
+    }
+}
+
 @media (max-width: 768px) {
     .fotos {
         width: 100px;
         padding: .5rem .5rem 1rem .5rem;
+
         & img {
             height: 100px;
         }
+
         &:nth-child(2), &:nth-child(4) {
             right: 2rem;
         }
+
         &:nth-child(1), &:nth-child(3) {
             left: 2rem;
         }
+
         &:nth-child(3), &:nth-child(4) {
             bottom: 2rem;
         }
     }
+
     .container {
         margin-top: 10rem;
     }
+
     .secao-de-entrada {
         width: 100%;
         padding-bottom: 12rem;
         position: relative;
     }
+
     #loading {
         padding: 0 1rem;
         text-align: center;
     }
+
     .countdown-container {
         flex-direction: column;
         align-items: center;
     }
+
     .pin {
         width: 30px !important;
         top: -.5rem;
     }
+
     .carta {
         margin-bottom: 2rem;
     }
+
     #mensagem {
         backdrop-filter: blur(20.119815826416016px);
     }
