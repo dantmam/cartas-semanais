@@ -4,7 +4,7 @@ if (form) {
     form.addEventListener("submit", function(event) {
         event.preventDefault(); // Evita o envio normal do formulário
 
-        let respostaCorreta = "Conjunto de tweed";
+        let respostaCorreta = "Dia dos namorados";
         let radios = document.getElementsByName("alternativa");
         let respostaSelecionada = "";
         let loading = document.getElementById("loading");
@@ -32,7 +32,7 @@ if (form) {
                 mensagem.classList.add("verde");
 
                 setTimeout(() => {
-                    window.location.href = "carta-semanal-7.html";
+                    window.location.href = "carta-semanal-8.html";
                 }, 2000);
             } else {
                 mensagem.textContent = "Acho que você não gosta de mim, tente novamente.";

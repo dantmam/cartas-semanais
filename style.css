@@ -16,6 +16,16 @@ a {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .w-sm-50 {
+        width: 50%;
+    }
+}
+
 @keyframes typing {
     from {
         width: 0;
